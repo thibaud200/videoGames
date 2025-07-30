@@ -1,0 +1,52 @@
+{
+  "timestamp": "2025-07-29T22:52:56.217604",
+  "tests": {
+    "environment": {
+      "status": "success",
+      "checks": {
+        "python_version": "3.13.5",
+        "dir_config": true,
+        "dir_gog": true,
+        "file_config_gog.properties": true,
+        "file_config_config_loader.py": true,
+        "file_gog___init__.py": true,
+        "file_gog_models.py": true,
+        "file_gog_gog_hybrid_client.py": true,
+        "sqlite3": true,
+        "requests": true
+      }
+    },
+    "configuration": {
+      "status": "success",
+      "config": {
+        "gog.store.base_url": "https://www.gog.com",
+        "gog.api.timeout": 30,
+        "gog.retry.max_attempts": 3
+      }
+    },
+    "database_detection": {
+      "status": "success",
+      "active_db": "C:\\ProgramData\\GOG.com\\Galaxy\\storage\\galaxy-2.0.db",
+      "size_mb": 58.49,
+      "last_modified": "2025-07-10T09:27:05.971324"
+    },
+    "local_games_extraction": {
+      "status": "success",
+      "count": 397,
+      "platforms": {
+        "windows": 397,
+        "mac": 0,
+        "linux": 0
+      }
+    },
+    "simple_export": {
+      "status": "success",
+      "file": "exports/gog_games_test.json",
+      "size_kb": 80.53,
+      "games_count": 397
+    }
+  },
+  "games": [],
+  "stats": {},
+  "errors": []
+}

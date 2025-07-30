@@ -1,0 +1,1 @@
+"""Module de configuration pour l'auth-api"""

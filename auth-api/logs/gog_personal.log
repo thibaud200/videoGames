@@ -1,0 +1,27 @@
+2025-07-29 22:22:57,642 - [GOG] - INFO - Configuration chargée depuis config/gog.properties
+2025-07-29 22:22:57,643 - [GOG] - INFO - GOGPersonalClient initialisé avec succès
+2025-07-29 22:22:57,889 - [GOG] - WARNING - Erreur requête GOG (tentative 1): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:00,001 - [GOG] - WARNING - Erreur requête GOG (tentative 2): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:02,215 - [GOG] - WARNING - Erreur requête GOG (tentative 3): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:02,216 - [GOG] - ERROR - Erreur lors de la récupération des données utilisateur: Échec de la requête après 3 tentatives: Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:02,218 - [GOG] - INFO - Astuce: Vous devez être connecté à GOG.com dans votre navigateur
+2025-07-29 22:23:02,916 - [GOG] - WARNING - Erreur requête GOG (tentative 1): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:40,674 - [GOG] - INFO - Configuration chargée depuis config/gog.properties
+2025-07-29 22:23:40,674 - [GOG] - INFO - GOGPersonalClient initialisé avec succès
+2025-07-29 22:23:40,901 - [GOG] - WARNING - Erreur requête GOG (tentative 1): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:43,021 - [GOG] - WARNING - Erreur requête GOG (tentative 2): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:45,200 - [GOG] - WARNING - Erreur requête GOG (tentative 3): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:45,201 - [GOG] - ERROR - Erreur lors de la récupération des données utilisateur: Échec de la requête après 3 tentatives: Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:45,202 - [GOG] - INFO - Astuce: Vous devez être connecté à GOG.com dans votre navigateur
+2025-07-29 22:23:45,755 - [GOG] - WARNING - Erreur requête GOG (tentative 1): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:48,255 - [GOG] - WARNING - Erreur requête GOG (tentative 2): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:50,458 - [GOG] - WARNING - Erreur requête GOG (tentative 3): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:50,458 - [GOG] - ERROR - Erreur lors de la recherche publique: Échec de la requête après 3 tentatives: Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:52,611 - [GOG] - WARNING - Erreur requête GOG (tentative 1): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:23:56,959 - [GOG] - WARNING - Erreur requête GOG (tentative 2): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:24:01,417 - [GOG] - WARNING - Erreur requête GOG (tentative 3): Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:24:01,418 - [GOG] - ERROR - Erreur lors de la récupération des détails du jeu 1207658924: Échec de la requête après 3 tentatives: Expecting value: line 1 column 1 (char 0)
+2025-07-29 22:24:01,418 - [GOG] - WARNING - Utilisation de données mock - remplacez par votre implémentation
+2025-07-29 22:24:01,419 - [GOG] - INFO - Données mock: 2 jeux
+2025-07-29 22:24:01,420 - [GOG] - INFO - Liste des jeux exportée vers test_gog_games.json
+2025-07-29 22:24:01,421 - [GOG] - INFO - Liste des jeux importée depuis test_gog_games.json: 2 jeux

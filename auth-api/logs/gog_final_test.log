@@ -1,0 +1,10 @@
+2025-07-29 22:50:05,586 - [GOG-TEST] - INFO - Configuration chargée depuis config/gog.properties
+2025-07-29 22:50:05,661 - [GOG-TEST] - INFO - GOGHybridClient initialisé avec succès
+2025-07-29 22:50:05,665 - [GOG-TEST] - INFO - Configuration chargée depuis config/gog.properties
+2025-07-29 22:50:05,666 - [GOG-TEST] - INFO - Base de données GOG Galaxy trouvée : C:\ProgramData\GOG.com\Galaxy\storage\galaxy-2.0.db
+2025-07-29 22:52:56,139 - [GOG-TEST] - INFO - Configuration chargée depuis config/gog.properties
+2025-07-29 22:52:56,217 - [GOG-TEST] - INFO - GOGHybridClient initialisé avec succès
+2025-07-29 22:52:56,220 - [GOG-TEST] - INFO - Configuration chargée depuis config/gog.properties
+2025-07-29 22:52:56,221 - [GOG-TEST] - INFO - Base de données GOG Galaxy trouvée : C:\ProgramData\GOG.com\Galaxy\storage\galaxy-2.0.db
+2025-07-29 22:52:56,222 - [GOG-TEST] - INFO - Base de données GOG Galaxy trouvée : C:\ProgramData\GOG.com\Galaxy\storage\galaxy-2.0.db
+2025-07-29 22:52:56,315 - [GOG-TEST] - INFO - Récupéré 397 jeux depuis la base de données locale
