@@ -1,44 +1,78 @@
-import { exec } from 'child_process';
-import { promisify } from 'util';
-import path from 'path';
+// lib/game-utils.ts
 
-const execAsync = promisify(exec);
+// Gestion des tags pour SQLite
+export function tagsToString(tags: string[]): string {
+  return tags.join(',');
+}
 
-interface GameData {
+export function stringToTags(tagsString: string | null | undefined): string[] {
+  return tagsString && tagsString.trim() !== '' 
+    ? tagsString.split(',').filter(tag => tag.trim() !== '') 
+    : [];
+}
+
+// Type pour un jeu complet (avec enum correct)
+export interface Game {
   id: number;
+  externalId: string;
   title: string;
-  platform: string;
-  // ... autres propriétés
+  platform: 'STEAM' | 'GOG' | 'EPIC' | 'OTHER';
+  category?: string | null;
+  description?: string | null;
+  releaseDate?: Date | null;
+  imageUrl?: string | null;
+  supportsWindows: boolean;
+  supportsMac: boolean;
+  supportsLinux: boolean;
+  tags?: string | null;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
-export async function callSteamModule(): Promise<GameData[]> {
-  try {
-    const scriptPath = path.join(process.cwd(), 'auth-api', 'steam', 'main.py');
-    const { stdout } = await execAsync(`python "${scriptPath}"`);
-    // Validation plus sûre
-    if (!stdout || stdout.trim() === '') {
-      return [];
-    }
-    const result = JSON.parse(stdout) as unknown;
-    return Array.isArray(result) ? result as GameData[] : [];
-  } catch (error) {
-    console.error('Erreur Steam:', error);
-    return [];
+// Helpers pour les tags
+export function getGameTags(game: Pick<Game, 'tags'>): string[] {
+  return stringToTags(game.tags);
+}
+
+export function setGameTags(tags: string[]): string | null {
+  return tags.length > 0 ? tagsToString(tags) : null;
+}
+
+// Fonction utilitaire bonus
+export function hasTag(game: Pick<Game, 'tags'>, searchTag: string): boolean {
+  const tags = getGameTags(game);
+  return tags.some(tag => tag.toLowerCase().includes(searchTag.toLowerCase()));
+}
+
+// Helper pour les plateformes
+export function getPlatformIcon(platform: Game['platform']): string {
+  switch (platform) {
+    case 'STEAM':
+      return './icons/steam.jfif';
+    case 'GOG':
+      return './icons/gog.png';
+    case 'EPIC':
+      return './icons/epic.png';
+	case 'XBOXONE':
+      return './icons/xbox.png';
+	case 'WINDOWS':
+      return './icons/Pc.png';
+	case 'BATTLENET':
+      return './icons/battlenet.png';
+	case 'MAC':
+      return './icons/apple.jfif';
+	case 'LINUX':
+      return '🐧'; 
+    default:
+      return '📱';
   }
 }
 
-export async function callGOGModule(): Promise<GameData[]> {
-  try {
-    const scriptPath = path.join(process.cwd(), 'auth-api', 'gog', 'main.py');
-    const { stdout } = await execAsync(`python "${scriptPath}"`);
-    // Validation plus sûre
-    if (!stdout || stdout.trim() === '') {
-      return [];
-    }
-    const result = JSON.parse(stdout) as unknown;
-    return Array.isArray(result) ? result as GameData[] : [];
-  } catch (error) {
-    console.error('Erreur GOG:', error);
-    return [];
-  }
+// Helper pour formater les plateformes supportées
+export function getSupportedPlatforms(game: Pick<Game, 'supportsWindows' | 'supportsMac' | 'supportsLinux'>): string[] {
+  const platforms: string[] = [];
+  if (game.supportsWindows) platforms.push('Windows');
+  if (game.supportsMac) platforms.push('Mac');
+  if (game.supportsLinux) platforms.push('Linux');
+  return platforms;
 }

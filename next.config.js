@@ -9,6 +9,25 @@ const config = {
   experimental: {
   },
 
+  // ✅ La configuration des images doit être DANS cet objet
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.gog-statics.com',
+        port: '',
+        pathname: '/**',
+      },
+	  {
+        protocol: 'https',
+        hostname: 'images-*.gog-statics.com',
+        port: '',
+        pathname: '/**',
+      },
+      // Ajoutez d'autres domaines ici si nécessaire
+    ],
+  },
+
   turbopack: {
     // Vos optimisations Turbo ici si besoin
     // Optimisations Turbo

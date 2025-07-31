@@ -1,0 +1,15 @@
+pyproject.toml
+auth_api.egg-info/PKG-INFO
+auth_api.egg-info/SOURCES.txt
+auth_api.egg-info/dependency_links.txt
+auth_api.egg-info/top_level.txt
+config/__init__.py
+config/config_loader.py
+gog/__init__.py
+gog/data_model.py
+gog/parser_gog.py
+gog/test_parser.py
+steam/__init__.py
+steam/main.py
+steam/models.py
+steam/steam_client.py

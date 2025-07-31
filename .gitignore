@@ -4,6 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
+/.vscode
+/auth-api/__pycache__/
+/auth-api/gog/__pycache__/
 
 # testing
 /coverage
