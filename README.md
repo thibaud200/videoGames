@@ -1,5 +1,10 @@
 # Create T3 App
 
+This application work based on GOG galaxy app. the purpose of the web app is to have a list of your digital games that are accross the different plateforms : steam/gog/ubisoft/xobx/etc....
+for this you need to configure the app gog galaxy to be able to connect to the differents plateform you have games on. it will enable you to have a small app accessible on the Internet whitout connecting to everyplateforms.
+its just to have a list of the games you own. it's not meant to replace the differents plateforms sites. 
+Why througt GOG galaxy : because the company has a partnership with the other sites and scrapping the site without authorisation could get you banned from your account period.
+
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
 ## What's next? How do I make an app with this?
@@ -27,3 +32,5 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
+
