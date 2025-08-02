@@ -1,74 +1,252 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "sqlite"
-    // NOTE: When using mysql or sqlserver, uncomment the @db.Text annotations in model Account below
-    // Further reading:
-    // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
-    // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
-    url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    createdBy   User   @relation(fields: [createdById], references: [id])
-    createdById String
-
-    @@index([name])
+model Game {
+  id                  Int      @id @default(autoincrement())
+  gameId              String   @unique
+  title               String
+  summary             String?
+  platform            String?
+  releaseDate         Int?     // Timestamp
+  criticsScore        Float    @default(0.0)
+  myRating            Float?
+  all                 Int      @default(0)
+  unlocked            Int      @default(0)
+  isFromProductsApi   Int      @default(0)
+  isModifiedByUser    Int      @default(0)
+  state               String?
+  parentGrk           String?
+  
+  // Images et médias
+  background          String?
+  horizontalCover     String?
+  verticalCover       String?
+  logo                String?
+  squareIcon          String?
+  productCard         String?
+  
+  // URLs et liens
+  changelog           String?
+  forum               String?
+  support             String?
+  
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  
+  // Relations
+  artworks            Artwork[]
+  bonuses             Bonus[]
+  dlcs                DLC[]
+  features            Feature[]
+  genres              Genre[]
+  developers          Developer[]
+  publishers          Publisher[]
+  tags                Tag[]
+  themes              Theme[]
+  screenshots         Screenshot[]
+  videos              Video[]
+  installers          Installer[]
+  patches             Patch[]
+  languagePacks       LanguagePack[]
+  localizations       Localization[]
+  releases            Release[]
+  items               Item[]
+  supported           SupportedPlatform[]
+  gameStats           GameStats?
+  score               Score?
+  releasesStats       ReleaseStats[]
+  ownedReleaseKeys    OwnedReleaseKey[]
 }
 
-// Necessary for Next auth
-model Account {
-    id                       String  @id @default(cuid())
-    userId                   String
-    type                     String
-    provider                 String
-    providerAccountId        String
-    refresh_token            String? // @db.Text
-    access_token             String? // @db.Text
-    expires_at               Int?
-    token_type               String?
-    scope                    String?
-    id_token                 String? // @db.Text
-    session_state            String?
-    user                     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-    refresh_token_expires_in Int?
-
-    @@unique([provider, providerAccountId])
+model Artwork {
+  id     Int    @id @default(autoincrement())
+  url    String
+  type   String?
+  gameId Int
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
 }
 
-model Session {
-    id           String   @id @default(cuid())
-    sessionToken String   @unique
-    userId       String
-    expires      DateTime
-    user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+model Bonus {
+  id          Int    @id @default(autoincrement())
+  name        String
+  type        String?
+  url         String?
+  description String?
+  gameId      Int
+  game        Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
 }
 
-model User {
-    id            String    @id @default(cuid())
-    name          String?
-    email         String?   @unique
-    emailVerified DateTime?
-    image         String?
-    accounts      Account[]
-    sessions      Session[]
-    posts         Post[]
+model DLC {
+  id          Int     @id @default(autoincrement())
+  externalId  String
+  title       String
+  releaseDate Int?
+  price       Float?
+  gameId      Int
+  game        Game    @relation(fields: [gameId], references: [id], onDelete: Cascade)
 }
 
-model VerificationToken {
-    identifier String
-    token      String   @unique
-    expires    DateTime
+model Feature {
+  id     Int    @id @default(autoincrement())
+  name   String
+  gameId Int
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
 
-    @@unique([identifier, token])
+model Genre {
+  id     Int    @id @default(autoincrement())
+  name   String
+  gameId Int
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Developer {
+  id     Int    @id @default(autoincrement())
+  name   String
+  gameId Int
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Publisher {
+  id     Int    @id @default(autoincrement())
+  name   String
+  gameId Int
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Tag {
+  id     Int    @id @default(autoincrement())
+  name   String
+  gameId Int
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Theme {
+  id     Int    @id @default(autoincrement())
+  name   String
+  gameId Int
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Screenshot {
+  id     Int    @id @default(autoincrement())
+  url    String
+  gameId Int
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Video {
+  id          Int    @id @default(autoincrement())
+  url         String
+  title       String?
+  description String?
+  thumbnail   String?
+  gameId      Int
+  game        Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Installer {
+  id          Int     @id @default(autoincrement())
+  name        String
+  version     String?
+  platform    String?
+  language    String?
+  size        Int?
+  url         String?
+  gameId      Int
+  game        Game    @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Patch {
+  id          Int     @id @default(autoincrement())
+  version     String
+  releaseDate Int?
+  size        Int?
+  description String?
+  url         String?
+  gameId      Int
+  game        Game    @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model LanguagePack {
+  id       Int    @id @default(autoincrement())
+  language String
+  name     String?
+  gameId   Int
+  game     Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Localization {
+  id       Int    @id @default(autoincrement())
+  language String
+  region   String?
+  gameId   Int
+  game     Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Release {
+  id          Int     @id @default(autoincrement())
+  releaseKey  String
+  platform    String?
+  version     String?
+  releaseDate Int?
+  gameId      Int
+  game        Game    @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Item {
+  id          Int    @id @default(autoincrement())
+  name        String
+  type        String?
+  description String?
+  gameId      Int
+  game        Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model SupportedPlatform {
+  id       Int    @id @default(autoincrement())
+  platform String
+  gameId   Int
+  game     Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model GameStats {
+  id              Int @id @default(autoincrement())
+  playtime        Int @default(0)
+  achievements    Int @default(0)
+  lastPlayed      Int?
+  timesLaunched   Int @default(0)
+  gameId          Int @unique
+  game            Game @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Score {
+  id          Int   @id @default(autoincrement())
+  critics     Float @default(0.0)
+  users       Float @default(0.0)
+  metacritic  Float @default(0.0)
+  gameId      Int   @unique
+  game        Game  @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model ReleaseStats {
+  id          Int    @id @default(autoincrement())
+  releaseKey  String
+  downloads   Int    @default(0)
+  installs    Int    @default(0)
+  gameId      Int
+  game        Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model OwnedReleaseKey {
+  id         Int    @id @default(autoincrement())
+  releaseKey String
+  gameId     Int
+  game       Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
 }

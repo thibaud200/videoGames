@@ -9,7 +9,8 @@
     "moduleDetection": "force",
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
-
+    "tsBuildInfoFile": ".next/tsbuildinfo",
+    
     /* Strictness */
     "strict": true,
     "noUncheckedIndexedAccess": true,

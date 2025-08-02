@@ -10,7 +10,8 @@
     "db:migrate": "prisma migrate deploy",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
-    "dev": "next dev --turbo",
+    "dev": "next dev --turbo --port 3000",
+    "dev:fast": "next dev --turbo --port 3000 --experimental-https",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "postinstall": "prisma generate",
@@ -22,7 +23,7 @@
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.2",
-    "@prisma/client": "^6.5.0",
+    "@prisma/client": "^6.13.0",
     "@t3-oss/env-nextjs": "^0.12.0",
     "next": "^15.2.3",
     "next-auth": "5.0.0-beta.25",

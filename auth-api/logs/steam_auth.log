@@ -1,0 +1,57 @@
+2025-07-29 21:19:25,989 - [STEAM] - INFO - Configuration chargée depuis config/steam.properties
+2025-07-29 21:19:25,990 - [STEAM] - INFO - SteamClient initialisé avec succès
+2025-07-29 21:20:14,509 - [STEAM] - WARNING - Erreur requête API Steam (tentative 1): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=1151640&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:20:15,700 - [STEAM] - WARNING - Erreur requête API Steam (tentative 2): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=1151640&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:20:16,883 - [STEAM] - WARNING - Erreur requête API Steam (tentative 3): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=1151640&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:20:16,884 - [STEAM] - ERROR - Erreur lors de la récupération des jeux: Échec de la requête après 3 tentatives: 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=1151640&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:20:17,082 - [STEAM] - INFO - Récupéré les profils de 0 joueurs
+2025-07-29 21:20:23,999 - [STEAM] - INFO - Récupéré 0 applications Steam
+2025-07-29 21:21:19,353 - [STEAM] - INFO - Configuration chargée depuis config/steam.properties
+2025-07-29 21:21:19,353 - [STEAM] - INFO - SteamClient initialisé avec succès
+2025-07-29 21:21:22,636 - [STEAM] - WARNING - Erreur requête API Steam (tentative 1): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=thibs200&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:21:23,831 - [STEAM] - WARNING - Erreur requête API Steam (tentative 2): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=thibs200&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:21:25,015 - [STEAM] - WARNING - Erreur requête API Steam (tentative 3): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=thibs200&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:21:25,016 - [STEAM] - ERROR - Erreur lors de la récupération des jeux: Échec de la requête après 3 tentatives: 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=thibs200&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:21:25,209 - [STEAM] - INFO - Récupéré les profils de 0 joueurs
+2025-07-29 21:21:25,708 - [STEAM] - INFO - Récupéré 0 applications Steam
+2025-07-29 21:22:29,486 - [STEAM] - INFO - Configuration chargée depuis config/steam.properties
+2025-07-29 21:22:29,487 - [STEAM] - INFO - SteamClient initialisé avec succès
+2025-07-29 21:22:31,606 - [STEAM] - WARNING - Erreur requête API Steam (tentative 1): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=STEAM_0%3A1%3A46477748&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:22:32,783 - [STEAM] - WARNING - Erreur requête API Steam (tentative 2): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=STEAM_0%3A1%3A46477748&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:22:33,958 - [STEAM] - WARNING - Erreur requête API Steam (tentative 3): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=STEAM_0%3A1%3A46477748&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:22:33,959 - [STEAM] - ERROR - Erreur lors de la récupération des jeux: Échec de la requête après 3 tentatives: 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=STEAM_0%3A1%3A46477748&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:22:34,136 - [STEAM] - INFO - Récupéré les profils de 0 joueurs
+2025-07-29 21:22:34,644 - [STEAM] - INFO - Récupéré 0 applications Steam
+2025-07-29 21:22:52,106 - [STEAM] - INFO - Configuration chargée depuis config/steam.properties
+2025-07-29 21:22:52,107 - [STEAM] - INFO - SteamClient initialisé avec succès
+2025-07-29 21:22:53,744 - [STEAM] - WARNING - Erreur requête API Steam (tentative 1): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=6477748&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:22:54,926 - [STEAM] - WARNING - Erreur requête API Steam (tentative 2): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=6477748&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:22:56,175 - [STEAM] - WARNING - Erreur requête API Steam (tentative 3): 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=6477748&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:22:56,175 - [STEAM] - ERROR - Erreur lors de la récupération des jeux: Échec de la requête après 3 tentatives: 400 Client Error: Bad Request for url: https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?steamid=6477748&include_appinfo=1&include_played_free_games=1&key=D4E0232D5CAF1BEBC8E0957BFDBD3729&format=json
+2025-07-29 21:22:56,370 - [STEAM] - INFO - Récupéré les profils de 0 joueurs
+2025-07-29 21:22:56,858 - [STEAM] - INFO - Récupéré 0 applications Steam
+2025-07-29 21:23:41,484 - [STEAM] - INFO - Configuration chargée depuis config/steam.properties
+2025-07-29 21:23:41,484 - [STEAM] - INFO - SteamClient initialisé avec succès
+2025-07-29 21:23:43,295 - [STEAM] - ERROR - Erreur lors de la récupération des jeux: SteamGame.__init__() got an unexpected keyword argument 'playtime_deck_forever'. Did you mean 'playtime_mac_forever'?
+2025-07-29 21:23:43,491 - [STEAM] - ERROR - Erreur lors de la récupération des profils: SteamPlayerSummary.__init__() missing 3 required positional arguments: 'loccountrycode', 'locstatecode', and 'loccityid'
+2025-07-29 21:23:43,984 - [STEAM] - INFO - Récupéré 0 applications Steam
+2025-07-29 21:31:00,878 - [STEAM] - INFO - Configuration chargée depuis config/steam.properties
+2025-07-29 21:31:00,878 - [STEAM] - INFO - SteamClient initialisé avec succès
+2025-07-29 21:31:05,419 - [STEAM] - ERROR - Erreur lors de la récupération des jeux: SteamGame.__init__() got an unexpected keyword argument 'playtime_deck_forever'. Did you mean 'playtime_mac_forever'?
+2025-07-29 21:31:05,611 - [STEAM] - ERROR - Erreur lors de la récupération des profils: SteamPlayerSummary.__init__() missing 3 required positional arguments: 'loccountrycode', 'locstatecode', and 'loccityid'
+2025-07-29 21:31:06,161 - [STEAM] - INFO - Récupéré 0 applications Steam
+2025-07-29 21:32:37,610 - [STEAM] - INFO - Configuration chargée depuis config/steam.properties
+2025-07-29 21:32:37,611 - [STEAM] - INFO - SteamClient initialisé avec succès
+2025-07-29 21:32:48,024 - [STEAM] - ERROR - Erreur lors de la récupération des jeux: SteamGame.__init__() got an unexpected keyword argument 'playtime_deck_forever'. Did you mean 'playtime_mac_forever'?
+2025-07-29 21:32:48,223 - [STEAM] - ERROR - Erreur lors de la récupération des profils: SteamPlayerSummary.__init__() missing 3 required positional arguments: 'loccountrycode', 'locstatecode', and 'loccityid'
+2025-07-29 21:32:48,722 - [STEAM] - INFO - Récupéré 0 applications Steam
+2025-07-29 21:38:26,942 - [STEAM] - INFO - Configuration chargée depuis config/steam.properties
+2025-07-29 21:38:26,943 - [STEAM] - INFO - SteamClient initialisé avec succès
+2025-07-29 21:38:33,384 - [STEAM] - ERROR - Erreur lors de la récupération des jeux: SteamGame.__init__() got an unexpected keyword argument 'playtime_deck_forever'. Did you mean 'playtime_mac_forever'?
+2025-07-29 21:38:33,590 - [STEAM] - ERROR - Erreur lors de la récupération des profils: SteamPlayerSummary.__init__() missing 3 required positional arguments: 'loccountrycode', 'locstatecode', and 'loccityid'
+2025-07-29 21:38:34,170 - [STEAM] - INFO - Récupéré 0 applications Steam
+2025-07-29 21:42:24,537 - [STEAM] - INFO - Configuration chargée depuis config/steam.properties
+2025-07-29 21:42:24,538 - [STEAM] - INFO - SteamClient initialisé avec succès
+2025-07-29 21:44:29,867 - [STEAM] - INFO - Récupéré 56 jeux pour l'utilisateur 76561198053221225
+2025-07-29 21:44:30,063 - [STEAM] - INFO - Récupéré les profils de 1 joueurs
+2025-07-29 21:44:30,582 - [STEAM] - INFO - Récupéré 0 applications Steam
